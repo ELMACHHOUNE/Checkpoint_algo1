@@ -1,0 +1,28 @@
+ALGORITHM count
+VAR
+    str : STRING ;
+    lenght : INTEGER := 0 ;
+    num_word : INTEGER := 0 ;
+    num_vowel : INTEGER := 0 ;
+    bool : treuty := TRUE ;
+BEGIN
+    Read(str);
+    WHILE (treuty) DO
+        IF (str[lenght]=" ") THEN
+            num_word := num_word + 1;
+        END_IF
+        IF (str[lenght]="a" OR str[lenght]="e" OR str[lenght]="u" OR str[lenght]="y" OR str[lenght]="i" OR str[lenght]="o") THEN
+            num_vowel := num_vowel + 1;
+        END_IF
+        IF (str[lenght] = ".") THEN
+            treuty := FALSE
+        END_IF
+        
+        lenght := lenght + 1;
+    END_WHILE
+
+    Write(lenght);
+    Write(num_word);
+    Write(num_vowel);
+
+END
